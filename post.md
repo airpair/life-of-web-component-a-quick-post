@@ -147,7 +147,7 @@ The **details** of the previous code are as follows:
 
 - Once the definition and declaration is ready the **italic-text** custom element is then registered using using **registerElement()** method.
  
-### Step 2:Importing Using Custom Element italic-text ###
+### Step 3:Importing Using Custom Element italic-text ###
 Now it is time to use **italic-text** in a web page.The following code shows the HTML markup which uses HTML import specification using **link** element and **rel** attribute with **import** value.
 
 	<!DOCTYPE html>
