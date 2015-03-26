@@ -1,23 +1,32 @@
-The meaning of life for any object is its **significance**, **origin**, **purpose** and **ultimate fate** is a central question in philosophy, religion and even in web technology. In other words every element in this world has its own significance, origin, purpose and destiny. To acquire the complete knowledge of any element we need to focus on these key points. Keeping this in mind let’s start to understand the life of web component. This post is a quick introduction of W3C web component and can help the developers to kick start their learning on web components.
+The meaning of life for any object is its **significance**, **origin**, **purpose** and **ultimate fate** and it pose a central question in philosophy, religion and even in web technology. In other words every element in this world has its own significance, origin, purpose and destiny. To acquire the complete knowledge of any element we need to focus on these key points. Keeping this in mind let’s start to understand the life of web component. This post is a quick introduction of W3C web component and can help the developers to kick start their learning on web components.
 
 ## Significance of Web Component ##
-The W3C web component specification provides a better way of web application development. There are many problems present that a web developer faces while developing a web application. Some of the problems are as follows:-
-- While developing web pages we can find many components with similar semantic structure. These things lead to huge amount of redundant code. This increases the complexity of managing these components.	
-- While developing web page we use many 3rd party components. We use ID, CLASSES and ATTRIBUTES for differentiating among these components and sometime we need to use IFRAME to provide a private scope to the component. There are many issues in IFRAME rendering like implementing responsive width of the content.
+The W3C web component specification provides a better way of web application development. There are many problems present that a web developer faces while developing a web application. Some of the problems are as follows:
+
+- While developing web pages we can find many components with similar semantic structure. These things lead to huge amount of **redundant code**. This increases the complexity of managing these components.	
+
+- While developing web page we use many 3rd party components. We use ID, CLASSES and ATTRIBUTES for differentiating among these components and sometime we need to use IFRAME to provide a **private scope** to the component. There are many issues in IFRAME rendering like implementing responsive width of the content.
 
 To address these problems W3C web component specification come for rescue with different features like **template**, **shadow DOM**, **HTML Imports** and **custom elements**.
+
 ## Origin of Web Component ##
 Prior to web component specification we have used plugins created using different libraries like **Jquery**, **YUI**, and **DOJO** etc. We have treated these plugins as web component. These plugins have perfectly mimicked the properties of web component. However all these plugin need an additional base javascript library to be loaded prior to their execution. The following diagram shows the way we are heading on web component development.
+
 ![Web Component image](http://i.imgur.com/gdiHOq6.png)
  
 Plugins have created an additional layer of execution. In simple words Plugins are **foreign entities** and their **origin** is not from the browser. We need a web component which will be native to the browser. As we know anything developed in a **native** language has an advantage in performance. Considering these points W3C came with a new specification which suggest a web application can be developed using the features listed in it.
 
 If we look into the frameworks that are exists for W3C web component specification have an additional layer of polyfill. For example in Google’s **Polymer** library has the **webcomponent.js** dependency script. However it is just a temporary library that will be removed in near future when the browsers will start supporting web component specification natively.
+
 ## Purpose of Web Component ##
 W3C Web Component is a collection of specification and each specification has its own purpose and addresses the issues existing in the current approach of web application development. These specifications are as follows:
+
 - **Custom Element:** This specification empowers the developer to create their own elements.	
+
 - **Template:** This specification empowers the developer to create a reusable fragment of HTML that can be injected dynamically using javascript.
-- **Shadow DOM:** This specification empowers the developer to create abstraction that helps in separating complexity from the markup. 
+
+- **Shadow DOM:** This specification empowers the developer to create abstraction that helps in separating complexity from the markup.
+ 
 - **HTML Imports:** This specification empowers the developer to include HTML document to another HTML document.
 
 ### Understanding Custom Element ###
@@ -44,7 +53,7 @@ In the previous code a custom element name **my-component** is defined using **r
     </template>
 
 ### Understanding Shadow DOM ###
-The purpose of this specification is to create private scope for the component.A shadow DOM can be created using createShadowRoot() method.The syntax for creating a shadow DOM is as follows:
+The purpose of this specification is to create private scope for the component.A shadow DOM can be created using **createShadowRoot()** method.The syntax for creating a shadow DOM is as follows:
 
     <div id="myElement"></div>
     <script>
@@ -58,7 +67,7 @@ The details of the previous code are as follows:
 - **Shadow Root:** The **root** element of the shadow tree is called as **Shadow Root**.
 
 ### Understanding HTML Imports ###
- The purpose of this specification is to create a better packaging for the component.The syntax for including a HTML document using import is as follows:
+ The purpose of this specification is to create a **better packaging** for the component.The syntax for including a HTML document using import is as follows:
 
     <link rel="import" href="fileName.html">
 
@@ -70,10 +79,24 @@ Inclusion of shadow DOM concept to the HTML DOM tree makes the document as **tre
 
 ![DOM tree](http://i.imgur.com/gNVm0Dt.png)
 
+## Web Component Life Cycle Methods ##
+A web Component goes through different **states** during its life cycle.The following diagrams shows different states of a web component.
+
+![Web Component States and Callback](http://i.imgur.com/dy3f3MI.png)
+
+The details of the previous diagram are as follows:
+- **created:** An web component will be in **created** state when it is first **initialized**.To handle this state **createdCallback()** method is provided by the specification.
+
+- **attached**: An web component will be in **attached** state when it is first **inserted** to DOM.To handle this state **attachedCallback()** method is provided by the specification.
+
+- **detached:** An web component will be in **detached** state when it is **removed** from the DOM.To handle this state **detachedCallback()** method is provided by the specification.
+
+- **attributeChanged:** An web component will be in **attributeChanged** state when one of its attribute value is **updated**.To handle this state **attribueChangedCallback()** method is provided by the specification.
+
 ## Ultimate Fate of Web Component ##
 At present the Web Component specification is not completely implemented. In the coming years all these browser are going to support these specification.We can check the browser support of the web component specification using **Can I Use?** online tool.The current state of support to the web component for different browser are as follows:
 
-- **Custom Element Support:**The following screenshot is taken from Can I Use? online tool and it clearly indicates the Firefox browsers does not support custom element specification at present.However we can enable the experimental web component flag in Firefox to use the custom elements.
+- **Custom Element Support:**The following screenshot is taken from** Can I Use?** online tool and it clearly indicates the Firefox browsers does not support custom element specification at present.However we can enable the experimental **web component flag** in Firefox to use the custom elements.
 
 ![can i use custom element](http://i.imgur.com/90mXHb8.png)
 
@@ -114,7 +137,7 @@ In the above code a **italic element(i)** is used as placeholder to render the t
 
 - **::Shadow**: It represents the shadow tree of the host element.In our example the **italic element(i)** is present inside the shadow DOM tree we have used **:host::shadow i** css string to apply font size to **20px**.
 
-### Step 2: Defining & Registering template italic-text element ###
+### Step 2: Defining & Registering italic-text element ###
 In this step we will create script for defining object prototype and register an element to the DOM.The following code shows the detailed javascript for implementing **italic-text** element.
 
 
@@ -147,7 +170,7 @@ The **details** of the previous code are as follows:
 
 - Once the definition and declaration is ready the **italic-text** custom element is then registered using using **registerElement()** method.
  
-### Step 3:Importing Using Custom Element italic-text ###
+### Step 2:Importing & Using italic-text Custom Element  ###
 Now it is time to use **italic-text** in a web page.The following code shows the HTML markup which uses HTML import specification using **link** element and **rel** attribute with **import** value.
 
 	<!DOCTYPE html>
@@ -172,4 +195,7 @@ The **italic-text** custom element demo can be found in the following **JSBIN** 
 [http://jsbin.com/yeheki/1/edit?html,js,output](http://jsbin.com/yeheki/1/edit?html,js,output "JSBIN demo link")
 
 ## Conclusion ##
-From this post we have learnt the life of web component. We have now understood how a web component fits in to the current state of web application development.
+From this post we have learnt the life of web component. We have now understood how a web component fits in to the current state of web application development.There are many other feature that need focus while learning web component development, But I have focused on writing a quick article to grasp the highlights of web component specification.
+
+Finally an appeal to the readers, If you like and got some knowledge on Web Component do share it with your network as, 
+> ***There is no wealth like knowledge,and no poverty like ignorance***.
