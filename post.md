@@ -85,6 +85,7 @@ A web Component goes through different **states** during its life cycle.The foll
 ![Web Component States and Callback](http://i.imgur.com/dy3f3MI.png)
 
 The details of the previous diagram are as follows:
+
 - **created:** An web component will be in **created** state when it is first **initialized**.To handle this state **createdCallback()** method is provided by the specification.
 
 - **attached**: An web component will be in **attached** state when it is first **inserted** to DOM.To handle this state **attachedCallback()** method is provided by the specification.
