@@ -197,5 +197,5 @@ The **italic-text** custom element demo can be found in the following **JSBIN** 
 ## Conclusion ##
 From this post we have learnt the life of web component. We have now understood how a web component fits in to the current state of web application development.There are many other feature that need focus while learning web component development, But I have focused on writing a quick article to grasp the highlights of web component specification.
 
-Finally an appeal to the readers, If you like and got some knowledge on Web Component do share it with your network as, 
+Finally an appeal to the readers, *If you like and got some knowledge on Web Component do share it with your network as*, 
 > ***There is no wealth like knowledge,and no poverty like ignorance***.
